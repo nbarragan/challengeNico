@@ -46,7 +46,7 @@ export const register = async(req,res) => {
         //let existsUser = false;
         console.log(newUser);
 
-        const existsUser = await getConnection().get('usser').find({email : req.body.email}).value();
+        const existsUser = await getConnection().get('user').find({email : req.body.email}).value();
 
         if(!existsUser){
             getConnection().get('user').push(newUser).write();
