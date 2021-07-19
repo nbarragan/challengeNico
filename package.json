@@ -21,5 +21,12 @@
   "devDependencies": {
     "nodemon": "^2.0.12"
   },
-  "nodemonConfig":{"ext":"js","ignore":["*.test.ts","db/*"],"delay":"2"}
+  "nodemonConfig": {
+    "ext": "js",
+    "ignore": [
+      "*.test.ts",
+      "db/*"
+    ],
+    "delay": "2"
+  }
 }

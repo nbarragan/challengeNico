@@ -12,7 +12,7 @@ const privateKey = 'secret_token_CdS';
 const getUsers = async(req,res) =>{
     res.json(user);
 }*/
- 
+
 export const login = async (req,res) =>{
     const {email,password} = req.body;
     
@@ -44,14 +44,15 @@ export const register = async(req,res) => {
         const id = 1;
         const newUser = { id,...req.body };
         //let existsUser = false;
-        console.log(newUser);
+        const {users} = await getConnection().data
 
-        const existsUser = await getConnection().get('user').find({email : req.body.email}).value();
+        const existsUser = users.some((item) => item.email === email)
+        console.log(existsUser)
 
-        if(!existsUser){
+        /* if(!existsUser){
             getConnection().get('user').push(newUser).write();
         }else{
             res.status(500).json({error:'The user already exists'});
-        };
+        }; */
     }
 }
