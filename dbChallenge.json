@@ -1,0 +1,9 @@
+{
+  "user": [{
+    "email": "seba@gmail.com",
+    "firstName": "Sebastian",
+    "lastName": "Sanchez",
+    "password": "nacional"
+    }],
+  "movies": [{"name" : "Harry Potter"}]
+}
